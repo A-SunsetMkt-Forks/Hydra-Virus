@@ -7,7 +7,15 @@ Hydra is a Windows virus that displays a message box. When you close a message b
 
 This virus was implemented using ***Visual Basic*** and ***.NET 4.7.1***.
 
-Demo: https://youtu.be/2Nk8loSs02c
+To shut it down complete, you can use Task Manager. If the Task Manager is disable, do the following steps to enable it:
+- Open **Registry Editor**
+- Locate `Computer\HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\System`
+- Open **DisableTaskMgr**, enter `0` to **Value data**
+- Click **OK**
+
+Demo 1: https://youtu.be/2Nk8loSs02c
+
+Demo 2: https://youtu.be/a2TUs6uHr70
 
 Note that this virus is harmless 🙂 If you know how to make it more annoying (for example: Task Manager can't shut it down), feel free to contact me
 
