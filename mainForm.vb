@@ -17,7 +17,11 @@ Public Class mainForm
         End If
 
         Media.SystemSounds.Hand.Play()
-        DisableTaskManager()
+
+        Try
+            DisableTaskManager()
+        Catch
+        End Try
     End Sub
 
     Private Sub mainForm_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
