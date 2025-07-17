@@ -13,6 +13,11 @@ To shut it down complete, you can use Task Manager. If the Task Manager is disab
 - Open **DisableTaskMgr**, enter `0` to **Value data**
 - Click **OK**
 
+To stop the virus from running at Windows startup, do the following steps:
+- Open **Registry Editor**
+- Locate `Computer\HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run`
+- Delete the `Hydra` registry value
+
 Demo 1: https://youtu.be/2Nk8loSs02c
 
 Demo 2: https://youtu.be/a2TUs6uHr70
